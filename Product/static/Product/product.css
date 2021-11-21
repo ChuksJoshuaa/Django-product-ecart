@@ -104,9 +104,9 @@ nav {
   transition: all 0.2s linear;
 }
 .show-links {
-  height: 25vh;
+  height: 100vh;
   text-decoration: none;
-  background: rgba(217, 214, 208, 1);
+  background: #fff;
 }
 
 @media screen and (min-width: 800px) {
