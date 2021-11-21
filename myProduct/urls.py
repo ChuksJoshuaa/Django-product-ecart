@@ -22,7 +22,7 @@ from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Product/', include('Product.urls')),
+    path('', include('Product.urls')),
     path('Email/', include('Email.urls')),
     path('register/', views.user_registerview, name='prod-user_register'),
     path('login/', auth_views.LoginView.as_view(template_name='prod-user_login.html'), name='prod-user_login'),
