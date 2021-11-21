@@ -1,0 +1,68 @@
+{% extends "product_base1.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load humanize %}
+{% block name %}
+
+
+      <div class="detail">
+           <a href="{% url 'prod-home' %}" class="btn btn-secondary" id="back" style="animation: none;">back</a>
+           <br>
+            <div class="main-detail">
+              <img width="300px;" style="border-radius: 10px 10px;"   src="{{ object.image.url }}"  alt="...">
+              <div>
+                  <br>
+                  <h5><b>Name:</b> {{ object.name }}</h5>
+                  <h6>Price: ${{ object.price }}</h6>
+                  <p>{{ object.category.name }}</p>
+                  <hr>
+                  <p>Description: {{ object.description }}</p>
+                  <p style="font-size: 0.7rem; color: red; float: right; font-family: 'Ubuntu', sans-serif;"><span style="color: black;">posted on
+                  </span>- {{ object.created_at | naturaltime }}</p>
+              </div>
+              <div class="tion" style="margin-bottom: 5%; margin-right: 10%;">
+                   {% if object.person == user %}
+                      <div style="display: flex; margin: 0 10px;" class="update">
+                       <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" style="animation: none;" href="{% url 'prod-update' object.id %}">
+                           <i class="fas fa-edit"></i></a>
+                       <a style="margin-left: 3%; animation: none;" class="btn btn-danger btn-sm mt-1 mb-1"
+                            href="{% url 'prod-delete' object.id %}">
+                            <i class="fas fa-trash"></i></a>
+                     </div>
+                   {% endif %}
+                  </div>
+           </div>
+           <div class="cont">
+               <h4 style=" font-size: 1.3rem;">
+                 Leave a Comment
+               </h4>
+             <form action="." method="POST">{% csrf_token %}
+                 {{ form|crispy }}
+                 <button class="btn btn-secondary" style="animation: none;">Reply</button>
+             </form>
+           </div>
+             <br>
+             {% if comments %}
+                {% for com in comments %}
+                  <div class="comment-container">
+                     <div class="comment" style="display: flex;">
+                         <img style="width: 30px; border-radius: 50%;" src="{% static 'Product/Media/avatar.png' %}">
+                         <p style="font-size: 0.7rem;"><span>{{com.commenter_name}} </span>
+                             <span style="color: black; font-size: 0.7rem;"> posted on
+                             </span> {{ com.date_added | naturaltime }} </p>
+
+                         {% if request.user.username == com.commenter_name %}
+                            <a style="animation: none; font-size: 0.6rem; margin-left: 12%;
+                                  color: red; height: 17px;"
+                                href="{% url 'comment-delete' object.id %}">
+                            <i class="fas fa-trash"></i></a>
+                        {% endif %}
+                     </div>
+                       <div class="com">- {{ com.comment }}</div>
+                  </div>
+                {% endfor %}
+             {% endif %}
+      </div>
+<h1 style="margin-bottom: 5%;"></h1>
+{% include 'footer.html' %}
+{% endblock %}

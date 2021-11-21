@@ -1,0 +1,12 @@
+{% extends "product_base1.html" %}
+{% block name %}
+<body style="background-color: white;">
+  <div class="both-log" style="max-width: 600px; width: 80%;
+           margin: 0 auto; font-family: 'Ubuntu', sans-serif; font-size: 1rem;">
+          <h3>You have been logged out</h3>
+          <div style="animation: none;" >
+               <a style="animation: none;" class="btn btn-outline-secondary" href="{% url 'prod-user_login' %}">Login</a>
+          </div>
+  </div>
+</body>
+{% endblock %}

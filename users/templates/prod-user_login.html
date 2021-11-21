@@ -1,0 +1,56 @@
+{% extends "product_base1.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block name %}
+<body style="background: hsl(210, 36%, 96%);">
+  <section class="ftco-section" style="margin-left: 5%;">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-1">
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex" >
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last"
+							 style="background: rgb(175, 185, 227)">
+							<div class="text w-100" style="color: black;">
+								<h2 style="font-family: 'Ubuntu', sans-serif;">Welcome to login</h2>
+								<p style="color: black;">Don't have an account?</p>
+								<a href="{% url 'prod-user_register' %}" class="btn btn-white btn-white"
+								   style="animation: none; color: white;">Sign Up</a>
+							</div>
+			            </div>
+						<div class="login-wrap p-4 p-lg-5" style="background: #fff">
+			         	<div class="d-flex">
+			      		  <div class="w-100">
+			      			<h3 class="mb-4" >Sign In</h3>
+			      		 </div>
+
+			      	</div>
+                    <form action="." method="POST" class="signin-form">{% csrf_token %}
+                        {{ form|crispy }}
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn- submit px-3"
+								style="animation: none; background: rgb(175, 185, 227); color: white;">Sign In</button>
+		            </div>
+		            <div class="form-group d-md-flex">
+		            	<span class="w-50 text-left">
+			            	<label class="checkbox-wrap checkbox-primary mb-0" style="font-size: 0.8rem; "><span style="font-size: 0.8rem;"  class="checkmark"></span>Remember Me
+									  <input type="checkbox" checked>
+							</label>
+						</span>
+						<span class="w-50 " style="font-size: 0.7rem; font-weight: 400; ">
+							<a href="{% url 'password_reset' %}" style="text-decoration: none;">Forgot Password</a>
+						</span>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+  </body>
+{% endblock %}

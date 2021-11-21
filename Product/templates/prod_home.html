@@ -1,0 +1,48 @@
+{% extends "product_base.html" %}
+{% load static %}
+
+
+{% block content %}
+         {% for instance in main %}
+            <div class="post">
+               <img src="{{ instance.image.url }}" alt="...">
+                <div class="article">
+                    <div class="aside">
+                        <h3>{{ instance.name }}</h3>
+                        <p>${{ instance.price }}</p>
+                    </div>
+                        <p>{{ instance.description|truncatewords:30  }}<span><a href="{{ instance.get_absolute_url }}">..Detail</a></span></p>
+                        <p style="display: none;">{{ instance.category}}</p>
+                        <p class="date" style="display: none;">-{{ instance.created_at|date:"F d, Y"}}</p>
+                </div>
+            </div>
+         {% endfor %}
+       <div class="page">
+           {% if is_paginated %}
+             {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1" style="display: none;">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}" style="animation: none;">
+                    <i class="fas fa-chevron-left"></i></a>
+              {% endif %}
+
+             {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                      <a class="btn btn-info mb-4" href="?page={{ num }}" style="animation: none;">{{ num }}</a>
+                  {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                      <a class="btn btn-outline-info mb-4" href="?page={{ num }}" style="animation: none;">{{ num }}</a>
+               {% endif %}
+            {% endfor %}
+
+             {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}" style="animation: none;">
+                    <i class="fas fa-chevron-right"></i></a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}"
+                   style="display: none;">Last</a>
+
+               {% endif %}
+
+            {% endif %}
+       </div>
+
+
+{% endblock %}

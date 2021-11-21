@@ -1,0 +1,40 @@
+{% load static %}
+
+<header>
+        <div class="main-nav">
+          <nav id="nav">
+              <div class="nav-center">
+                <div class="nav-header">
+                  <img width = "50px;" style = "border-radius: 60%;" src = "{% static 'Product/Media/Portfolio.jpg' %}"
+                       alt = "This is a logo" >
+                  <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+
+                <ul class="links">
+                     <li class="scroll-link"><a href="{% url 'prod-home' %}">
+                         <i class="fa fa-home" aria-hidden="true">home</i></a></li>
+                  {% if user.is_authenticated %}
+                     <li class="scroll-link"><a href="{% url 'prod-create' %}">
+                         <i class="fa fa-product-hunt" aria-hidden="true">Product</i></a></li>
+                     <li class="scroll-link"><a href="https://product-cart.netlify.app/">
+                         <i class="fas fa-cart-plus" aria-hidden="true">Cart</i></a></li>
+                     <li class="scroll-link"><a href="{% url 'prod-product' %}">
+                         <i class="fa fa-file-pdf-o" aria-hidden="true">Create PDF</i></a></li>
+                     <li class="scroll-link"><a href="{% url 'prod-user_logout' %}">
+                         <i class="fa fa-sign-out" aria-hidden="true">Logout</i></a></li>
+                  {% else %}
+                     <li class="scroll-link"><a href="{% url 'prod-user_register' %}">
+                         <i class="fas fa-registered">Register</i></a></li>
+                     <li class="scroll-link"><a href="{% url 'prod-user_login' %}">
+                         <i class="fa fa-sign-in" aria-hidden="true">Login</i></a></li>
+                  {% endif %}
+                </ul>
+                <ul class="social-icons">
+                    <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.twitter.com"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com"><i class="fab fa-github"></i></a></li>
+                </ul>
+              </div>
+          </nav>
+        </div>
+     </header>

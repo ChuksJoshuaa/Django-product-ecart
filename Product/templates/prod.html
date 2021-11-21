@@ -1,0 +1,17 @@
+{% load static %}
+<div class="none">
+   </div>
+   <div class="main-home"  style="background: url('{% static 'Product/Media/second.jpg' %}');
+                                               background-position: center;
+                                               background-size: cover;">
+     <div class="banner">
+       <div class="main-home-sub">
+           <h1 style="rgb(16, 42, 66);">Finding Your Perfect Shoes</h1>
+                <p style="color: rgb(16, 42, 66);">Never underestimate the power of a shoe,<br>
+                    Your shoes are only as good as the laces<br>
+                    they're attached to
+                </p>
+           <a href="{% url 'prod-email' %}" class="scroll-link btn btn-white">Contact-Us</a>
+       </div>
+     </div>
+   </div>

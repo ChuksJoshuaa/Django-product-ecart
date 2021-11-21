@@ -1,0 +1,19 @@
+{% extends "product_base1.html" %}
+{% load crispy_forms_tags %}
+{% block name %}
+<body style="background-color: white;" xmlns="http://www.w3.org/1999/html">
+  <div class="both">
+
+    <form action="." method="POST">{% csrf_token %}
+         <fieldset class="field">
+             <div class="join" style="font-size: 1.3rem;">Delete Post</div>
+             <h5 style="font-size: 1rem;">Are you sure you want to delete this comment? </h5>
+           <div class="delete">
+             <input class="btn btn-outline-danger" style="animation: none; font-size: 0.7rem;" type="submit" value="Yes, Delete">
+              <a class="btn btn-outline-secondary" style="animation: none; font-size: 0.7rem;" href="">Cancel</a>
+           </div>
+         </fieldset>
+    </form>
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<h1 style="font-family: 'Roboto', sans-serif; font-size: 1.5rem; margin-left: 10%; margin-bottom: 10px; font-weight: 900;">
+    SHOP WITH US</h1>
+<div class="shop-container" style="margin-bottom: 5%;">
+    <div class="shop">
+        <h1>SHOP EARLY, CHILL LATER</h1>
+        <p>Make your October extra fun, Shop with us TODAY</p>
+      <div style="display: flex; margin: 10px; color: black;">
+        <a href="{% url 'prod-user_register' %}"><button class="scroll-link btn btn-primary" style="animation: none;">Join Us</button></a>
+        <span style="margin-left: 10px;">
+            <a href="{% url 'prod-user_login' %}"><button class="scroll-link btn btn-primary" style="animation: none;">Sign In</button></a>
+        </span>
+      </div>
+    </div>
+</div>
+<div class="explore-container">
+      <h1>MORE TO EXPLORE</h1>
+     <div class="explore">
+        <div class="exp">
+            <img  width="300px;"  src="{% static 'Product/Media/jacket.jpg' %}">
+            <h4 class="nick">Jacket</h4>
+        </div>
+
+        <div class="exp">
+             <img width="300px;"  src="{% static 'Product/Media/watch.jpg' %}">
+             <h4 class="nick">Watch</h4>
+        </div>
+
+        <div class="exp">
+             <img width="300px;"  src="{% static 'Product/Media/bag.webp' %}">
+             <h4 class="nick">Bag</h4>
+        </div>
+     </div>
+     <div style="display: flex; justify-content: space-around;" class="game">
+        <h4>Jacket</h4>
+        <h4>Watch</h4>
+        <h4>Bag</h4>
+   </div>
+</div>
+
+
+
+
+

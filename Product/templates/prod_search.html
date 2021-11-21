@@ -1,0 +1,44 @@
+{% extends 'product_base1.html' %}
+{% load humanize %}
+{% block name %}
+
+    <h5 class="text center" style="margin-left: 20px;"> Search Results:  </h5>
+
+        <hr>
+
+        <div class="container">
+
+            <div class="row justify-content-center m-4">
+
+                {% if post %}
+
+                    {% for product in post %}
+
+                        <div class="col-md-4">
+                            <div class="search_field">
+                                <img src="{{ product.image.url }}" style="height: 300px; width: 300px;
+                                     border-radius: 20px 20px;
+                                     margin-bottom: 30px;"
+                                     class="card-img-top" alt="...">
+                                <div>
+                                    <h4>{{ product.name }}</h4>
+                                    <h3 style="color: rgb(16, 52, 107)">${{ product.price }}</h3>
+                                    <hr>
+                                    <p>{{ product.created_at | naturaltime }}</p>
+                                    <a href="{% url 'prod-detail' product.id %}" class="btn btn-primary m-1" style="animation: none;">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                {% else %}
+                     <p>No Products available </p>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+
+{% endblock %}

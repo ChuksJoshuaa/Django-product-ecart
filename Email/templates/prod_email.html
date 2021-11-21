@@ -1,0 +1,21 @@
+{% extends "product_base1.html" %}
+{% load crispy_forms_tags %}
+{% block name %}
+<body style="background-color: white;">
+  <div class="both">
+     <h1 style="margin-bottom: 7%;"></h1>
+    <form action="." autocomplete="off" method="POST" enctype="multipart/form-data">{% csrf_token %}
+         <fieldset class="field">
+             <div class="come">Contact Form </div>
+             <br>
+           {{form|crispy}}
+             <br>
+           <div style="position: relative; bottom: 6%;">
+             <button type="submit" style="padding: 3px 10px; border-radius: 5px 5px;">Send</button>
+           </div>
+         </fieldset>
+    </form>
+  </div>
+</body>
+{% include 'footer.html' %}
+{% endblock %}
