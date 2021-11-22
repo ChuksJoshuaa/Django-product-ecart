@@ -11,7 +11,9 @@
                         <h3>{{ instance.name }}</h3>
                         <p>${{ instance.price }}</p>
                     </div>
-                        <p>{{ instance.description|truncatewords:30  }}<span><a href="{{ instance.get_absolute_url }}">..Detail</a></span></p>
+                        <p>{{ instance.description|truncatewords:30  }}
+                            <span
+                                  style="animation: none; font-size: 1rem;"><a href="{{ instance.get_absolute_url }}">...Click here</a></span></p>
                         <p style="display: none;">{{ instance.category}}</p>
                         <p class="date" style="display: none;">-{{ instance.created_at|date:"F d, Y"}}</p>
                 </div>

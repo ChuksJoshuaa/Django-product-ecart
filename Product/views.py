@@ -22,7 +22,7 @@ class list_view(ListView):
     ordering = ['-created_at']
     paginate_by = 6
 
-class detail_view(LoginRequiredMixin, DetailView):
+class detail_view(DetailView):
     model = Product
     template_name = "prod_detail.html"
     paginate_by = 3

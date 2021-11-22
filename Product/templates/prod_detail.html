@@ -14,7 +14,9 @@
                   <br>
                   <h5><b>Name:</b> {{ object.name }}</h5>
                   <h6>Price: ${{ object.price }}</h6>
-                  <p>{{ object.category.name }}</p>
+                   <div class="btn btn-primary" style="animation: none;"><a href="https://product-cart.netlify.app/">
+                         <i class="fas fa-cart-plus" style="color: white;"></i></a></div>
+                  <span></span>
                   <hr>
                   <p>Description: {{ object.description }}</p>
                   <p style="font-size: 0.7rem; color: red; float: right; font-family: 'Ubuntu', sans-serif;"><span style="color: black;">posted on
@@ -23,14 +25,15 @@
               <div class="tion" style="margin-bottom: 5%; margin-right: 10%;">
                    {% if object.person == user %}
                       <div style="display: flex; margin: 0 10px;" class="update">
-                       <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" style="animation: none;" href="{% url 'prod-update' object.id %}">
-                           <i class="fas fa-edit"></i></a>
-                       <a style="margin-left: 3%; animation: none;" class="btn btn-danger btn-sm mt-1 mb-1"
-                            href="{% url 'prod-delete' object.id %}">
-                            <i class="fas fa-trash"></i></a>
-                     </div>
+                           <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" style="animation: none;" href="{% url 'prod-update' object.id %}">
+                               <i class="fas fa-edit"></i></a>
+                           <a style="margin-left: 3%; animation: none;" class="btn btn-danger btn-sm mt-1 mb-1"
+                                href="{% url 'prod-delete' object.id %}">
+                                <i class="fas fa-trash"></i></a>
+                      </div>
                    {% endif %}
-                  </div>
+              </div>
+
            </div>
            <div class="cont">
                <h4 style=" font-size: 1.3rem;">
@@ -48,7 +51,7 @@
                      <div class="comment" style="display: flex;">
                          <img style="width: 30px; border-radius: 50%;" src="{% static 'Product/Media/avatar.png' %}">
                          <p style="font-size: 0.7rem;"><span>{{com.commenter_name}} </span>
-                             <span style="color: black; font-size: 0.7rem;"> posted on
+                             <span style="color: black; font-size: 0.7rem;"> posted
                              </span> {{ com.date_added | naturaltime }} </p>
 
                          {% if request.user.username == com.commenter_name %}
