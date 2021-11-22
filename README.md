@@ -35,7 +35,9 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 - [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS
 
--[Html and Css]
+- [xhtml2pdf](https://pypi.org/project/xhtml2pdf/)- xhtml2pdf is a HTML to PDF converter using Python, the ReportLab Toolkit, html5lib and PyPDF2
+
+- [Html and Css]
 
 ## Tools, libraries and resources used:
 
