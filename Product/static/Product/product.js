@@ -1,6 +1,7 @@
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 const dateEl = document.getElementById("date")
+const greatEl = document.querySelector(".great");
 now = new Date().getFullYear()
 dateEl.innerHTML = now;
 
@@ -75,6 +76,8 @@ const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
 
+const great = months[tempMonth]
+greatEl.innerHTML = great
 let month = futureDate.getMonth();
 month = months[month];
 const weekday = weekdays[futureDate.getDay()];
