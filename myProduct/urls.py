@@ -20,6 +20,8 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from users import views
 
+admin.site.site_header = 'Product Admin'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Product.urls')),
