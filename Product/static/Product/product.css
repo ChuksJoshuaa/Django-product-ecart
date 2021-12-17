@@ -974,3 +974,27 @@ main {
   color: #fff;
   border: 1px solid #222;
 }
+
+.babe {
+  width: 40%;
+  position: relative;
+  top: 20%;
+  left: 30%;
+  margin: 10px;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 1200px) {
+   .babe {
+      width: 60%;
+      left: 15%;
+   }
+}
+
+@media screen and (max-width: 688px) {
+  .babe {
+     width: 90%;
+     left: 4%;
+  }
+
+}

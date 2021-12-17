@@ -3,11 +3,9 @@
 
 {% block name %}
 <body style="background: #fff;">
-   <div class="both">
-     <h1 style="margin-bottom: 12%;"></h1>
     <form action="." method="POST">{% csrf_token %}
-         <fieldset>
-             <div class="create">CREATE ACCOUNT</div>
+         <fieldset class="babe">
+             <div class="come">CREATE ACCOUNT</div>
              <br>
            {{ form|crispy }}
              <br>
@@ -20,6 +18,5 @@
           </div>
          </fieldset>
     </form>
-  </div>
 </body>
 {% endblock %}
