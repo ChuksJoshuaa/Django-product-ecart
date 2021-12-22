@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'captcha',
     'cloudinary',
 
     # my_own_app
@@ -154,7 +155,8 @@ EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-
+RECAPTCHA_PUBLIC_KEY = "6Lc9SL8dAAAAAFU0WzHwmd1hp1ckZzjncqIDhnyj"
+RECAPTCHA_PRIVATE_KEY = "6Lc9SL8dAAAAAFH6bZhEFpgHb9VnDhR-E1eXssOc"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
