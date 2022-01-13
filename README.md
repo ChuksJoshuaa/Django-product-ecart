@@ -61,7 +61,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 -Create Heroku App, Select Postgres add-on, download Heroku CLI toolbelt, login to heroku (Heroku login), git init, connect git to heroku (heroku git remote -a ), git add ., git commit, git push heroku master.
 
--heroku run bash
+-heroku run bash.
 
 -ls
 
