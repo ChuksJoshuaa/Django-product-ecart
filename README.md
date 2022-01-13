@@ -69,4 +69,4 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 -python manage.py create superuser.
 
--heroku login
+-heroku login.
