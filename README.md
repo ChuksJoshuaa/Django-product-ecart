@@ -45,7 +45,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 - [FontAwesome](https://fontawesome.com/)
 
-- [PgAdmin](https://www.pgadmin.org/) - Open Source administration and development platform for PostgreSQL
+- [PgAdmin](https://www.pgadmin.org/) - Open Source administration and development platform for PostgreSQL.
 
 ## Getting started
 
