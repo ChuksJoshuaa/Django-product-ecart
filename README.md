@@ -41,7 +41,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 ## Tools, libraries and resources used:
 
-- [Pillow](https://pillow.readthedocs.io/en/5.3.x/) - Pillow is the friendly PIL fork. PIL is the Python Imaging Library
+- [Pillow](https://pillow.readthedocs.io/en/5.3.x/) - Pillow is the friendly PIL fork. PIL is the Python Imaging Library.
 
 - [FontAwesome](https://fontawesome.com/)
 
