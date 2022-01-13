@@ -33,7 +33,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 - [PostgreSQL](https://www.postgresql.org/) - Object-relational database management system (ORDBMS) with an emphasis on extensibility and standards.
 
-- [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS
+- [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS.
 
 - [xhtml2pdf](https://pypi.org/project/xhtml2pdf/)- xhtml2pdf is a HTML to PDF converter using Python, the ReportLab Toolkit, html5lib and PyPDF2
 
