@@ -65,7 +65,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 -ls
 
--python manage.py migrate
+-python manage.py migrate.
 
 -python manage.py create superuser
 
