@@ -13,7 +13,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 ## Features
 
--View list of all the available products and make a pdf copy of the available products at the store.
+-View list of all the available products and make a pdf copy of the available products at the store..
 
 -Add New Products to the website.
 
