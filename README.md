@@ -15,7 +15,7 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 -View list of all the available products and make a pdf copy of the available products at the store..
 
--Add New Products to the website.
+-Add New Products to the website..
 
 -cart system where users can choose items and get the total amount for the product..
 
