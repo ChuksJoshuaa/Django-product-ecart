@@ -176,7 +176,7 @@ nav {
 .main-home-sub h1 {
   font-size: 2.5rem;
   overflow: hidden;
-  border-right: .15em solid rgb(16, 42, 66);
+  border-right: 0.1 solid rgb(16, 42, 66);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.125rem;
