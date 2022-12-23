@@ -13,37 +13,39 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 ## Features
 
--View list of all the available products and make a pdf copy of the available products at the store.
+-View list of all the available products and make a pdf copy of the available products at the store..
 
--Add New Products to the website.
+-Add New Products to the website..
 
--cart system where users can choose items and get the total amount for the product
+-cart system where users can choose items and get the total amount for the product..
 
--Comment on existing products and choose whether to email the admin on the type of product he/she wants.
+-Comment on existing products and choose whether to email the admin on the type of product he/she wants..
 
 ## Built With
 
-- [Python 3](https://www.python.org/) - Programming language that lets you work quickly and integrate systems more effectively
+- [Python 3](https://www.python.org/) - Programming language that lets you work quickly and integrate systems more effectively..
 
-- [Javascript](https://www.javascript.com) - It is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
+- [Javascript](https://www.javascript.com) - It is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive..
 
-- [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
+- [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design..
 
 - [Cloudinary](https://cloudinary.com/) - Cloudinary provides a secure and comprehensive API for easily uploading media files from server-side code, directly from the browser or from a mobile application.
 
-- [PostgreSQL](https://www.postgresql.org/) - Object-relational database management system (ORDBMS) with an emphasis on extensibility and standards
+- [PostgreSQL](https://www.postgresql.org/) - Object-relational database management system (ORDBMS) with an emphasis on extensibility and standards.
 
-- [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS
+- [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS.
 
--[Html and Css]
+- [xhtml2pdf](https://pypi.org/project/xhtml2pdf/)- xhtml2pdf is a HTML to PDF converter using Python, the ReportLab Toolkit, html5lib and PyPDF2..
+
+- [Html and Css]
 
 ## Tools, libraries and resources used:
 
-- [Pillow](https://pillow.readthedocs.io/en/5.3.x/) - Pillow is the friendly PIL fork. PIL is the Python Imaging Library
+- [Pillow](https://pillow.readthedocs.io/en/5.3.x/) - Pillow is the friendly PIL fork. PIL is the Python Imaging Library.
 
 - [FontAwesome](https://fontawesome.com/)
 
-- [PgAdmin](https://www.pgadmin.org/) - Open Source administration and development platform for PostgreSQL
+- [PgAdmin](https://www.pgadmin.org/) - Open Source administration and development platform for PostgreSQL.
 
 ## Getting started
 
@@ -55,12 +57,16 @@ Product Management System web app (Full Stack Frameworks with Django Project)
 
 ## Deployment
 
--Make sure requirements.txt and Procfile exist pip3 freeze --local requirements.txt echo web: python app.py > Procfile
+-Make sure requirements.txt and Procfile exist pip3 freeze --local requirements.txt echo web: python app.py > Procfile.
 
 -Create Heroku App, Select Postgres add-on, download Heroku CLI toolbelt, login to heroku (Heroku login), git init, connect git to heroku (heroku git remote -a ), git add ., git commit, git push heroku master.
 
--heroku run bash
+-heroku run bash.
 
--heroku run python manage.py migrate
+-ls
 
--heroku login
+-python manage.py migrate.
+
+-python manage.py create superuser.
+
+-heroku login.
